@@ -1,0 +1,264 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Michael Fink University of St. Thomas Flex license: MDK Professional 5.30 (Flex): 100 user(s) (mdk_pro) Operation stops: 23 Feb 2021
+ 
+Tool Versions:
+Toolchain:       MDK Professional 5.30 (Flex): 100 user(s)  Version: 5.30.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.42.0.0
+ 
+<h2>Project:</h2>
+C:\Users\barb7979\OneDrive - University of St. Thomas\ENGR331\ENGR331Labs\Final Project\Final_Project.uvprojx
+Project File Date:  12/01/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+LightSensorADC.c(65): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+//}
+   ^
+1 warning generated.
+compiling LightSensorADC.c...
+ServoPWM.c(6): warning: In file included from...
+./ServoPWM.h(8): warning: no newline at end of file [-Wnewline-eof]
+ 
+ ^
+ServoPWM.c(25): warning: signed shift result (0x80000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+        GPIOD->MODER |= (1<<31);
+                         ~^ ~~
+ServoPWM.c(25): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->MODER |= (1<<31);
+                     ~~  ~^~~~
+ServoPWM.c(26): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->MODER &= ~(1<<30);
+                     ~~ ^~~~~~~~
+ServoPWM.c(31): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        TIM4->CCMR2 &= ~(1<<9);
+                    ~~ ^~~~~~~
+ServoPWM.c(32): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        TIM4->CCMR2 &= ~(1<<8); // output
+                    ~~ ^~~~~~~
+6 warnings generated.
+compiling ServoPWM.c...
+main.c(3): warning: In file included from...
+./ServoPWM.h(8): warning: no newline at end of file [-Wnewline-eof]
+ 
+ ^
+main.c(29): warning: passing 'char [6]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        LCD_write_string("Temp ");
+                         ^~~~~~~
+./LCD.h(28): note: passing argument to parameter 'data' here
+void LCD_write_string(unsigned char data[]);
+                                    ^
+main.c(32): warning: passing 'char [2]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        LCD_write_string("C");
+                         ^~~
+./LCD.h(28): note: passing argument to parameter 'data' here
+void LCD_write_string(unsigned char data[]);
+                                    ^
+3 warnings generated.
+compiling main.c...
+PIR.c(19): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOC->MODER &= ~(0x3<<(PIR_Pin+1));                                                                    // set PA0 to Input [00]
+                     ~~ ^~~~~~~~~~~~~~~~~~~
+PIR.c(21): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        SYSCFG->EXTICR[0] &= ~(0x000F);
+                          ~~ ^~~~~~~~~
+2 warnings generated.
+compiling PIR.c...
+LCDLab.c(102): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  GPIOD->OTYPER &= ~(0x000000CF); 
+                ~~ ^~~~~~~~~~~~~
+LCDLab.c(122): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<RS);
+                   ~~ ^~~~~~~~
+LCDLab.c(127): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F); // disable all
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(129): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN); //EN=LOW
+                   ~~ ^~~~~~~~
+LCDLab.c(132): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(134): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(137): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(139): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(142): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(144): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(148): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(150): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(153): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(155): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(159): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F); // 0000
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(160): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(164): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(168): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(169): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(173): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(177): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(178): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(182): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(186): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(187): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(190): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(192): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(234): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(236): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(239): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F);
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(241): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(243): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<RS); // set RS pin to low, done sending data
+                   ~~ ^~~~~~~~
+LCDLab.c(255): warning: passing 'unsigned char *' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        for(unsigned int i=0;i<strlen(data);i++)
+                                      ^~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+                                               ^
+LCDLab.c(270): warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
+        sprintf(str, "%.1f", num);
+        ^
+LCDLab.c(270): note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
+LCDLab.c(271): warning: passing 'char [16]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        LCD_write_string(str);
+                         ^~~
+LCDLab.c(254): note: passing argument to parameter 'data' here
+void LCD_write_string(unsigned char data[]){
+                                    ^
+LCDLab.c(295): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<RS);
+                   ~~ ^~~~~~~~
+LCDLab.c(297): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F); //0000
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(299): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(302): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F); // 0000
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(304): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(321): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F); //0000
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(323): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(326): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(0x0000000F); // 0000
+                   ~~ ^~~~~~~~~~~~~
+LCDLab.c(328): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<EN);
+                   ~~ ^~~~~~~~
+LCDLab.c(330): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOD->ODR &= ~(1<<RS);
+                   ~~ ^~~~~~~~
+45 warnings generated.
+compiling LCDLab.c...
+compiling TempSensor.c...
+compiling system_stm32f4xx.c...
+error - cannot create command input file '.\Objects\Final_Project.lnp'
+".\Objects\Final_Project.axf" - 0 Error(s), 57 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

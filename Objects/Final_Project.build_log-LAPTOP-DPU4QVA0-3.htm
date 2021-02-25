@@ -1,0 +1,121 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: John Vogel, University of St. Thomas, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\johnv\OneDrive - University of St. Thomas\ENGR331\ENGR331Labs\Final Project\Final_Project.uvprojx
+Project File Date:  12/01/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(3): warning: In file included from...
+./ServoPWM.h(8): warning: no newline at end of file [-Wnewline-eof]
+ 
+ ^
+main.c(6): warning: In file included from...
+./Light_Intensity_PWM.h(1): warning: no newline at end of file [-Wnewline-eof]
+void LDR_LED_init(void);
+                        ^
+main.c(33): warning: passing 'char [6]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        LCD_write_string("Temp ");
+                         ^~~~~~~
+./LCD.h(28): note: passing argument to parameter 'data' here
+void LCD_write_string(unsigned char data[]);
+                                    ^
+main.c(36): warning: passing 'char [2]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        LCD_write_string("C");
+                         ^~~
+./LCD.h(28): note: passing argument to parameter 'data' here
+void LCD_write_string(unsigned char data[]);
+                                    ^
+4 warnings generated.
+compiling main.c...
+compiling Temp_Light_Sensor.c...
+PIR.c(9): warning: no previous extern declaration for non-static variable 'motion_count' [-Wmissing-variable-declarations]
+int motion_count = 0;
+    ^
+PIR.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int motion_count = 0;
+^
+PIR.c(20): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOC->MODER &= ~(0x3<<(PIR_Pin+1));                                                                    // set PA0 to Input [00]
+                     ~~ ^~~~~~~~~~~~~~~~~~~
+PIR.c(22): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        SYSCFG->EXTICR[0] &= ~(0x000F);
+                          ~~ ^~~~~~~~~
+PIR.c(42): warning: passing 'char [12]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                LCD_write_string("Motion:Init");
+                                 ^~~~~~~~~~~~~
+./LCD.h(28): note: passing argument to parameter 'data' here
+void LCD_write_string(unsigned char data[]);
+                                    ^
+PIR.c(46): warning: passing 'char [10]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                LCD_write_string(" Sensed!!");
+                                 ^~~~~~~~~~~
+./LCD.h(28): note: passing argument to parameter 'data' here
+void LCD_write_string(unsigned char data[]);
+                                    ^
+PIR.c(51): warning: passing 'char [17]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                LCD_write_string("Motion:Searching");
+                                 ^~~~~~~~~~~~~~~~~~
+./LCD.h(28): note: passing argument to parameter 'data' here
+void LCD_write_string(unsigned char data[]);
+                                    ^
+6 warnings generated.
+compiling PIR.c...
+linking...
+Program Size: Code=7512 RO-data=584 RW-data=0 ZI-data=1648  
+".\Objects\Final_Project.axf" - 0 Error(s), 10 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\johnv\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\johnv\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

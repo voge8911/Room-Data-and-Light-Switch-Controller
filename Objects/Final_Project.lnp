@@ -1,0 +1,15 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\pir.o"
+".\objects\servopwm.o"
+".\objects\main.o"
+".\objects\lcdlab.o"
+".\objects\light_intensity_pwm.o"
+".\objects\temp_light_sensor.o"
+".\objects\pwm.o"
+".\objects\pushbutton.o"
+".\objects\startup_stm32f407xx.o"
+".\objects\system_stm32f4xx.o"
+--strict --scatter ".\Objects\Final_Project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Final_Project.map" -o .\Objects\Final_Project.axf
