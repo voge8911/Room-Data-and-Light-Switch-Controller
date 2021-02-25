@@ -1,0 +1,1 @@
+void LDR_LED_init(void);

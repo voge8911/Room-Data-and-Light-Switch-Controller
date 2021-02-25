@@ -1,0 +1,3 @@
+ADC	Use
+Ch1	Temperature Sensor
+	Light Sensor

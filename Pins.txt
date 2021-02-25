@@ -1,0 +1,19 @@
+Port	Pin	Use
+
+A	0	PIR Input
+	1	Temp Sensor ADC
+	2	Light Sensor (LDR) ADC
+	
+C	1	Push Button output (this pin motion sensor Vdd)
+	3	Push Button input (button to pin)
+	9	LED PWM
+
+D	15	Servo PWM
+	13 	GPIO motion LED
+
+	7	LCD RS
+	6	LCD E
+	3	LCD D7
+	2	LCD D6
+	1	LCD D5
+	0	LCD D4

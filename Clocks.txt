@@ -1,0 +1,11 @@
+
+Timer		Use
+
+Tim7
+Tim6		LCD
+Tim5_CH4	
+Tim4_CH4	Servo PWM
+Tim3		LED PWM
+Tim2
+Tim1
+Tim0
